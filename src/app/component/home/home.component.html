@@ -1,0 +1,36 @@
+<div class="container">
+  <button class="game_start" (click)="openModal()">Play Game</button>
+  <table class="statistic_table" matSort (matSortChange)="statisticService.sorting($event, STATISTIC)">
+    <thead>
+    <tr>
+      <th mat-sort-header="number_of_cards">Total card in session</th>
+      <th mat-sort-header="number_of_attempts">Total attempts</th>
+      <th mat-sort-header="number_of_removed_cards">Total disappeared</th>
+      <th mat-sort-header="total_duration">Total duration</th>
+      <th mat-sort-header="successfull_game?">Game success</th>
+      <th mat-sort-header="game_percentage">Percentage of removed</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let status of [1,2,3,4,5,6,7,8,9]">
+      <td>789</td>
+      <td>456</td>
+      <td>123</td>
+      <td>789</td>
+      <td>789</td>
+      <td>789</td>
+    </tr>
+    </tbody>
+  </table>
+
+    <div class="d-flex justify-content-between pagin">
+      <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+      </ngb-pagination>
+      <select class="custom-select" [(ngModel)]="pageSize">
+        <option [ngValue]="5">5 items per page</option>
+        <option [ngValue]="10">10 items per page</option>
+        <option [ngValue]="15">15 items per page</option>
+      </select>
+    </div>
+</div>
+

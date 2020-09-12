@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.game_start {
+  width: 180px;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  padding: 2px 10px;
+  margin: 2em 0;
+  border-radius: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #82BF56;
+  border-bottom: 5px solid #669644;
+  text-shadow: 0 -2px #669644;
+}
+
+.game_start:active
+{
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+}
+
+.statistic_table{
+  font-size: 16px;
+  width: 100%;
+  table-layout: fixed;
+  display: block;
+}
+
+.statistic_table tbody{
+  display:block;
+  overflow: auto;
+  max-height: 390px;
+}
+
+.statistic_table tbody tr{
+  background-color: #fff;
+}
+
+.statistic_table thead tr {
+  display: block;
+}
+
+.statistic_table thead {
+  background: black;
+  color:#fff;
+}
+
+.statistic_table th, .statistic_table td {
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.statistic_table tr:hover td {
+  background-color: #d4dbe2;
+}
+
+.pagin {
+  margin-top: 1em;
+}
+
+.custom-select {
+  width: auto;
+}
+
+@media screen and (max-width:775px) {
+  .game_start {
+    width: max-content;
+    font-size: 3vw;
+  }
+
+  .statistic_table th, .statistic_table td {
+    padding: 0;
+    font-size: 2vw;
+  }
+
+  .pagin, .custom-select {
+    font-size: 2.5vw;
+  }
+
+}
+

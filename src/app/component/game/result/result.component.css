@@ -1,0 +1,22 @@
+.modal-title {
+    margin: 0 auto;
+}
+.modal-header {
+    flex-direction: column;
+}
+.result {
+    text-align: center;
+}
+.btn {
+    width: 155px;
+}
+.btn {
+    justify-content: space-around;
+}
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-between;
+    align-items: center;
+}

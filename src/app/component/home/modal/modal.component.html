@@ -1,0 +1,12 @@
+ <div class="modal-header">
+    <h4 class="modal-title">{{title}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Close click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <button type="button" (click)="goToGamePage(16)" class="btn btn-outline-warning">4 X 4</button>
+    <button type="button" (click)="goToGamePage(32)" class="btn btn-outline-success">6 X 6</button>
+    <button type="button" (click)="goToGamePage(64)" class="btn btn-outline-primary">8 X 8</button>
+  </div>
+

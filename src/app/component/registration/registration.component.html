@@ -1,0 +1,36 @@
+<form class="form-4" [formGroup]="form">
+  <h1 class="form-head">Form Register</h1>
+  <div>
+    <label for="login">Email</label>
+    <input formControlName="email" type="text" name="login" placeholder="Email" required>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input formControlName="password" type="password" name='password' placeholder="Password" required>
+  </div>
+  <div>
+    <label for="password">Confirm password</label>
+    <input formControlName="cnfPass" type="password" name='password' placeholder="Re-enter Password" required>
+  </div>
+  <div>
+    <input type="submit" (click)="onSubmit(form.value)" name="submit" value="Register">
+  </div>
+  <br>
+  <hr>
+  <div *ngIf="form.touched" class="valid">
+    <div>
+      <i class="fa fa-check-circle" *ngIf="form.controls.email.valid"></i>
+      <i class="fa fa-times-circle" *ngIf="form.controls.email.invalid"></i>
+      Email should be minimum 4 characters long.
+    </div>
+    <div>
+      <i class="fa fa-check-circle" *ngIf="form.controls.cnfPass.valid"></i>
+      <i class="fa fa-times-circle" *ngIf="form.controls.cnfPass.invalid"></i>
+      Password and confirm password should match.
+    </div>
+    <div>
+      <i class="fa fa-times-circle" *ngIf="formValid.invalid"></i>
+      {{formValid.message}}
+    </div>
+  </div>
+</form>

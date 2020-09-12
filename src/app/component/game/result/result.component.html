@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h3 class="modal-title">Game over!</h3>
+    <h3 class="modal-title">Your result is: {{gameService.moves}}</h3>
+</div>
+<div class="modal-body">
+    <button type="button" (click)="btnClick(16)"
+        class="btn btn-outline-warning">
+        4 X 4
+    </button>
+    <button type="button" (click)="btnClick(32)"
+        class="btn btn-outline-success">
+        6 X 6
+    </button>
+    <button type="button" (click)="btnClick(64)"
+        class="btn btn-outline-primary">
+        8 X 8
+    </button>
+    <button class="btn btn-outline-secondary" routerLink="/home">
+        Go to Home page
+    </button>
+</div>

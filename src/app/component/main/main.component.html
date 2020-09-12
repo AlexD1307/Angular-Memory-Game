@@ -1,0 +1,15 @@
+<div id="particles-js">
+  <div class="text">
+    <h1>Welcome to Memory Game!</h1>
+    <p>Spread cards randomly over the playing surface, face down, until none overlap. Players take it in turn to pick two cards of their choosing. If the cards have the same rank (two sixes, for example), the player keeps the pair and plays again. If not, the cards are returned to their face-down position and it's the next person's turn. Play until all the cards have been matched.</p>
+  </div>
+  <div class="button" *ngIf="token">
+    <button type="button" class="btn btn-outline-light" routerLink="home">Home</button>
+    <button type="button" class="btn btn-outline-dark" (click)="log_out()">Log out</button>
+  </div>
+  <div class="button" *ngIf="!token">
+    <button type="button" class="btn btn-outline-light" routerLink="register">Register</button>
+    <button type="button" class="btn btn-outline-dark" routerLink="login">Login</button>
+  </div>
+</div>
+

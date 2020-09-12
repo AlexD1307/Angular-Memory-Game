@@ -1,0 +1,8 @@
+<div class="background">
+  <div class="container">
+    <div class="card" [class.flipped]="card.flipped" (click)="gameService.flipCard(card)" *ngFor="let card of gameService.cards">
+      <img class="front" [src]="card.src">
+      <img class="back" src="../../../assets/back.jpg">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+ <form class="form-4" [formGroup]="form">
+    <h1 class="form-head">Form Login</h1>
+    <p>
+      <input type="text" formControlName="email" name="login" placeholder="Email" required>
+    </p>
+    <p>
+      <input type="password" formControlName="password" name='password' placeholder="Password" required>
+    </p>
+
+    <p>
+      <input type="submit" (click)="onSubmit(form.value)" name="submit" value="Log in">
+    </p>
+   <br>
+   <hr>
+   <p class="fa fa-times-circle" *ngIf="loginError"> Invalid email or password.</p>
+  </form>

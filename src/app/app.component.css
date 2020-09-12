@@ -1,0 +1,7 @@
+body {
+ background-color: #bbbbbb80;
+}
+
+.modal .show {
+  display: block;
+}

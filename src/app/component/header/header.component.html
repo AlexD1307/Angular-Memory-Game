@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="container">
+    <a routerLink="">
+      <img class="logo" src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" alt="logo">
+    </a>
+    <div class="header-right">
+      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="home">Home</a>
+      <span *ngIf="!token">
+      <a routerLinkActive="active" routerLink="register">Register</a>
+      <a routerLinkActive="active" routerLink="login">Log in</a>
+      </span>
+      <a *ngIf="token" (click)="log_out()" routerLink="login">Log out</a>
+    </div>
+
+    <div class="mobile">
+      <div class="menu-block" >
+        <nav class="menu-nav">
+          <a class="nav_link" routerLink="home">Home</a>
+          <span *ngIf="!token">
+            <a class="nav_link" routerLink="register">Register</a>
+            <a class="nav_link" routerLink="login">Log in</a>
+          </span>
+          <a *ngIf="token" (click)="log_out()" class="nav_link" routerLink="login">Log out</a>
+        </nav>
+        <a href="#" class="menu-btn"
+           [ngClass]="{burger_activate: burgerIsClicked}" (click)="burgerClick($event)">
+        <span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

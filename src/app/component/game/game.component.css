@@ -1,0 +1,57 @@
+h1 {
+  color: #fff;
+}
+
+.head {
+  text-align: center;
+}
+
+.background {
+  background-image: url("https://i.pinimg.com/originals/18/a1/39/18a139c5af7c80f8cf7ff4c930660a5a.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+}
+
+.container {
+  max-width: 1250px;
+  padding-top: 5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  margin: 0 2% 2% 0;
+  perspective: 1000px;
+  position: relative;
+  width: 11em;
+  height: 13em;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,.5);
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+.flipped .front { transform: rotateY(360deg); }
+.flipped .back { transform: rotateY(180deg); }
+
+@media screen and (max-width: 775px){
+  .card {
+    width: 21vw;
+    height: 25vw;
+  }
+}
